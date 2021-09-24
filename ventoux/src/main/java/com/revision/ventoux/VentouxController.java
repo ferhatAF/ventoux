@@ -9,8 +9,8 @@ public class VentouxController {
     @GetMapping("api")
     private AppInformations getInformations(){
         return AppInformations.builder()
-                .appName("Ventoux")
-                .version("1.0.1")
+                .appName("Tourma3lich")
+                .version("1.0.S")
                 .build();
     }
 
