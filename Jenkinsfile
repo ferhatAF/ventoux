@@ -12,14 +12,14 @@ node('amzon') {
     stage ("build front end") {
         sh "cd front && npm install && ng build --prod"
     }
-
+/*
     stage ("sonarqube"){
         sh "cd ventoux && ./mvnw  sonar:sonar \\\n" +
                 "  -Dsonar.projectKey=ventoux \\\n" +
                 "  -Dsonar.host.url=http://18.204.34.80:9011 \\\n" +
                 "  -Dsonar.login=93d159940120470cf29ff8227abd37caa5fa1b9a"
     }
-
+*/
     try{
         sh "docker-compose down"
     }catch(Exception e){
