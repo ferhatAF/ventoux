@@ -1,6 +1,7 @@
-node('amazon') {
+node('amzon') {
     stage("Checkout"){
-        checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: '5224c92a-96b9-4562-aef1-09f07f734994', url: 'https://github.com/mahdchek/ventoux']]])
+    checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'FerhatAfCred', url: 'https://github.com/ferhatAF/ventoux.git']]])
+        //checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: '5224c92a-96b9-4562-aef1-09f07f734994', url: 'https://github.com/mahdchek/ventoux']]])
     }
 
     stage("build backend"){
